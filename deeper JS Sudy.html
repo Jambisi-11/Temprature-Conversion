@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+<body>
+   <p id="james"> Ajide Olabisi James</p> 
+   <button onclick="changeColor('blue', 'red', 'bolder')">Blue</button>
+   <button onclick="changeColor('red', 'blue','bolder')">Red</button>
+   <button onclick="changeFont('44px','bolder', 'underline')">Change Font Size</button>
+    <div id="first-div">
+        <p>Hello World!-1</p>
+        <p id="test1">hello word2</p>
+        <p>hello word3</p>
+        <p>hello word4</p>
+    </div>
+
+   
+   <script>
+    function changeFont(newsize, bolder, underline ){
+        const  ele= document.getElementById("james");
+        ele.style.fontSize=newsize; 
+        ele.style.fontWeight=bolder;
+        ele.style.textDecoration=underline
+    }
+  
+    function changeColor(colorNew, colorNew1, bolder){
+        const ele = document.getElementById("james");
+        ele.style.color=colorNew;
+        ele.style.backgroundColor=colorNew1; 
+        ele.style.fontWeight=bolder; 
+    }
+
+        const parent = document.getElementById("first-div");
+        const test1 = parent.getElementById("test1");
+
+        
+   </script>
+
+
+</body>
+</html>
